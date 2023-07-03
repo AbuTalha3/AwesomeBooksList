@@ -58,6 +58,7 @@ AddBookBtn.addEventListener('click', (e) => {
   clearInput();
 });
 
+/* eslint-disable no-unused-vars */
 function removeBook(id) {
   const indexOfBookToRemove = bookCollections.filter((book) => book.id === id);
 
