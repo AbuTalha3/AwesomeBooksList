@@ -26,6 +26,29 @@ function saveBooks() {
   window.localStorage.setItem('books', JSON.stringify(bookCollections));
 }
 
+// Render collection of books
+function renderBooks() {
+  const storedBooks = JSON.parse(window.localStorage.getItem('books'));
+
+  if (storedBooks) {
+    const displayBook = storedBooks.map(
+      (book, index) => `
+              <article class="d-flex flex-row justify-content-between">
+
+              <h2> ${book.title} </h2>
+              <p> ${book.author} </p>
+
+              <button onclick="removeBook(${index})" class="removeBtn"> Remove </button>
+
+              </article>
+
+              `,
+    );
+
+    booksContainer.innerHTML = displayBook.join('');
+  }
+}
+
 // Add eventListener to the button, to run each both functions everytime the button is clicked
 AddBookBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -42,29 +65,6 @@ function removeBook(id) {
     bookCollections.splice(indexOfBookToRemove, 1);
     saveBooks();
     renderBooks();
-  }
-}
-
-function renderBooks() {
-  const storedBooks = JSON.parse(window.localStorage.getItem('books'));
-
-  if (storedBooks) {
-    let displayBook = storedBooks.map(
-      (book, index) =>
-        `
-            <article class="d-flex flex-row justify-content-between">
-
-            <h2> ${book.title} </h2>
-            <p> ${book.author} </p>
-
-            <button onclick="removeBook(${index})" class="removeBtn"> Remove </button>
-
-            </article>
-
-            `,
-    );
-
-    booksContainer.innerHTML = displayBook.join('');
   }
 }
 
