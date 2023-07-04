@@ -5,14 +5,24 @@ const bookAuthor = document.querySelector('#author');
 const booksContainer = document.querySelector('.booksContainer');
 
 // Decalre bookCollections array
-const bookCollections = JSON.parse(window.localStorage.getItem('books')) || [];
+let bookCollections = JSON.parse(window.localStorage.getItem('books')) || [];
+
+// Decalare uniqueId for each books
+let count = 0;
+function uniqueId() {
+  id = count++;
+  return `book_${id}`;
+}
 
 // Decalre a addBooks function, push the value of title and author in the bookCollection array
 function addBooks() {
-  bookCollections.push({
-    title: bookTitle.value,
-    author: bookAuthor.value,
-  });
+  if (bookTitle.value !== '' && bookAuthor.value !== '') {
+    bookCollections.push({
+      id: uniqueId(),
+      title: bookTitle.value,
+      author: bookAuthor.value,
+    });
+  }
 }
 
 // Decalre a clearInput function, to clear the input value unpon clicking the button
@@ -32,13 +42,13 @@ function renderBooks() {
 
   if (storedBooks) {
     const displayBook = storedBooks.map(
-      (book, index) => `
+      (book) => `
               <article class="d-flex flex-row justify-content-between pb-3 border-bottom">
 
               <h2> ${book.title} </h2>
               <p> ${book.author} </p>
 
-              <button onclick="removeBook(${index})" class="removeBtn"> Remove </button>
+              <button onclick="removeBook('${book.id}')" class="removeBtn"> Remove </button>
 
               </article>
 
@@ -60,13 +70,9 @@ AddBookBtn.addEventListener('click', (e) => {
 
 /* eslint-disable no-unused-vars */
 function removeBook(id) {
-  const indexOfBookToRemove = bookCollections.filter((book) => book.id === id);
-
-  if (indexOfBookToRemove !== -1) {
-    bookCollections.splice(indexOfBookToRemove, 1);
-    saveBooks();
-    renderBooks();
-  }
+  bookCollections = bookCollections.filter((book) => book.id !== id);
+  saveBooks();
+  renderBooks();
 }
 
 window.addEventListener('DOMContentLoaded', () => {
