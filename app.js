@@ -10,7 +10,8 @@ let bookCollections = JSON.parse(window.localStorage.getItem('books')) || [];
 // Decalare uniqueId for each books
 let count = 0;
 function uniqueId() {
-  id = count++;
+  /* eslint-disable no-plusplus */
+  const id = count++;
   return `book_${id}`;
 }
 
