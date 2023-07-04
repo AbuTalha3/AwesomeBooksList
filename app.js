@@ -1,81 +1,134 @@
-//  declare btn, title and author variable using querySelector
-const AddBookBtn = document.querySelector('.addBook');
-const bookTitle = document.querySelector('#title');
-const bookAuthor = document.querySelector('#author');
-const booksContainer = document.querySelector('.booksContainer');
-
-// Decalre bookCollections array
-let bookCollections = JSON.parse(window.localStorage.getItem('books')) || [];
-
-// Decalare uniqueId for each books
-let count = 0;
-function uniqueId() {
-  /* eslint-disable no-plusplus */
-  const id = count++;
-  return `book_${id}`;
-}
-
-// Decalre a addBooks function, push the value of title and author in the bookCollection array
-function addBooks() {
-  if (bookTitle.value !== '' && bookAuthor.value !== '') {
-    bookCollections.push({
-      id: uniqueId(),
-      title: bookTitle.value,
-      author: bookAuthor.value,
-    });
+// book class : represents a book
+class Book {
+    constructor(title, author, id){
+        this.title = title;
+        this.author = author;
+        this.id = id;
+    }
   }
-}
-
-// Decalre a clearInput function, to clear the input value unpon clicking the button
-function clearInput() {
-  bookTitle.value = '';
-  bookAuthor.value = '';
-}
-
-// Save bookCollections to localstorage
-function saveBooks() {
-  window.localStorage.setItem('books', JSON.stringify(bookCollections));
-}
-
-//  Added Collection of books part.
-function renderBooks() {
-  const storedBooks = JSON.parse(window.localStorage.getItem('books'));
-
-  if (storedBooks) {
-    const displayBook = storedBooks.map(
-      (book) => `
-              <article class="d-flex flex-row justify-content-between pb-3 border-bottom">
-
-              <h2> ${book.title} </h2>
-              <p> ${book.author} </p>
-
-              <button onclick="removeBook('${book.id}')" class="removeBtn"> Remove </button>
-
-              </article>
-
-              `,
-    );
-
-    booksContainer.innerHTML = displayBook.join('');
+  
+  // UI class handle UI tasks
+  class UI {
+    static displayBooks() {
+        const books = Store.getBooks();
+  
+        books.forEach((book) => UI.addBookTolList(book));
+    }
+  
+    static addBookTolList(book) {
+        const list = document.querySelector('#book-list');
+  
+        const row = document.createElement('tr');
+        
+        row.innerHTML =`
+        <td>${book.title}</td>
+        <td>${book.author}</td>
+        <td>${book.id}</td>
+        <td><a href="#" class= "btn btn-danger btn-sm delete">X</a></td>
+        `;
+  
+        list.appendChild(row);
+      }
+  
+      static deleteBook(el) {
+        if(el.classList.contains('delete')) {
+            el.parentElement.parentElement.remove();
+          }
+        }
+        
+        static showAlert(message, className) {
+            const div = document.createElement('div')
+            div.className = `alert alert-${className}`;
+            div.appendChild(document.createTextNode(message));
+            const container = document.querySelector('.container');
+            const form = document.querySelector('#book-form');
+            container.insertBefore(div, form);
+  
+            // vanish in three seconds
+            setTimeout(() => document.querySelector('.alret').remove(), 3000);
+        }
+      
+      static clearFields() {
+        document.querySelector('#title').value ='';
+        document.querySelector('#author').value ='';
+        document.querySelector('#id').value ='';
+      }
+    }
+  
+        //  store class handles storage ,store the book name class
+  class Store {
+    static getBooks(){
+        let books;
+        if(localStorage.getItem('books') === null) {
+            books = [];
+        } else {
+            books = JSON.parse(localStorage.getItem('books'));
+        }
+  
+        return books;
+    }
+  
+    static addBook(book) {
+        const books = Store.getBooks();
+        books.push(book);
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+  
+    static removeBook(id) {
+        const books = Store.getBooks();
+  
+        books.forEach((book, index) => {
+            if(book.id === id) {
+                books.splice(index, 1);
+            }
+        });
+  
+        localStorage.setItem('books', JSON.stringify(books));
+    }
   }
-}
-
-// Add eventListener to the button, to run each both functions everytime the button is clicked
-AddBookBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  addBooks();
-  saveBooks();
-  renderBooks();
-  clearInput();
-});
-
-/* eslint-disable no-unused-vars */
-function removeBook(id) {
-  bookCollections = bookCollections.filter((book) => book.id !== id);
-  saveBooks();
-  renderBooks();
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  renderBooks();
-});
+  
+  // event: display books
+  document.addEventListener('DOMContentLoaded', UI.displayBooks);
+  
+  // event: add book 
+  document.querySelector('#book-form').addEventListener('submit',(e) => {
+       // prevent actual submit
+    e.preventDefault();   
+  
+    // get form values
+    const title= document.querySelector('#title').value;
+    const author= document.querySelector('#author').value;
+    const id= document.querySelector('#id').value;
+  
+    // validate
+    if(title === '' || author === '' || id === '') {
+        UI.showAlertlert('please fill in all feilds','danger');
+    } else {
+        //instatiate a book
+        const book = new Book(title, author, id);
+    
+        // add book to UI
+        UI.addBookTolList(book);
+  
+        //add book to store
+        Store.addBook(book);
+    
+        // show success message
+        UI.showAlert('Book Added', 'success')
+  
+        //clear feilds
+        UI.clearFields(); 
+    }
+  });
+  
+        //event: remove book
+    document.querySelector('#book-list').addEventListener('click', (e) => {       
+        // remove book from UI
+        UI.deleteBook(e.target)
+  
+        // remove book from store
+        Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+  
+        // show success message
+        UI.showAlert('Book Removed', 'success')
+  });
