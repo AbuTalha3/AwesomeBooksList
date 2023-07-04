@@ -129,8 +129,8 @@ I have added the linters or tests in order to avoid anykind of typos and ensure 
 👤 Abu Talha
 
 - GitHub: [@githubhandle](https://github.com/AbuTalha3)
-- Twitter: [@twitterhandle](https://twitter.com/errytage)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/errytagedesigns/)
+- Twitter: [@twitterhandle](https://twitter.com/AbuTalha8T)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abu-talha-8203b252/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
