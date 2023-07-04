@@ -33,7 +33,7 @@ function renderBooks() {
   if (storedBooks) {
     const displayBook = storedBooks.map(
       (book, index) => `
-              <article class="d-flex flex-row justify-content-between">
+              <article class="d-flex flex-row justify-content-between pb-3 border-bottom">
 
               <h2> ${book.title} </h2>
               <p> ${book.author} </p>
