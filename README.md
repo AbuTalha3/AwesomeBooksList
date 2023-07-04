@@ -1,13 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-  <img src="/assets/images/communitypro-logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Community Pro Tech Meets Events Project</b></h3>
-
-</div>
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -31,7 +23,7 @@
 
 # 📖 Hello Microverse Project <a name="about-project"></a>
 
-A Tech events Project developed with the best combo of HTML,CSS and JAVASCRIPT. In addition, i added Linters for Html,Css and Javascript.
+An Awesome books store project, where you can enter the name and author of the books and have it stored, Developed using Html, Css and Javascript
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -55,24 +47,11 @@ A Tech events Project developed with the best combo of HTML,CSS and JAVASCRIPT. 
 ### Key Features <a name="key-features"></a>
 
 - Add index.html file.
-- Add about.html file.
 - Add style.css file.
-- Add index.js file.
+- Add app.js file.
 - Add Linters.
 - Add Header to the index.html file.
-- Add Hero section to the index.html file.
-- Add global styling variables to style.html file.
-- Add Programs section to the index.html file.
-- Add more styles to the styles.css file.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-<a href="https://communitypro-meets.netlify.app/">Live Demo Link</a>
-<a href="https://errytagedesign.github.io/communitypro/">Live Demo Link</a>
+- Add global styling variables to style.css file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,13 +126,21 @@ I have added the linters or tests in order to avoid anykind of typos and ensure 
 - Twitter: [@twitterhandle](https://twitter.com/errytage)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/errytagedesigns/)
 
+👤 Abu Talha
+
+- GitHub: [@githubhandle](https://github.com/AbuTalha3)
+- Twitter: [@twitterhandle](https://twitter.com/errytage)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/errytagedesigns/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Add More Speakers
+- [ ] Add header and footer to index.html
+- [ ] Add more styles to style.css
+- [ ] Add more styles to style.css
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -180,9 +167,6 @@ If you like this project just give it a star -
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse.
-
-- This project was based on the design by [Cindy Shin](https://www.behance.net/adagio07) in [Behance](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015).
-- The design is licensed under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
