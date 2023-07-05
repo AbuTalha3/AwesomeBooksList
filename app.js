@@ -73,6 +73,7 @@ class Book {
 
   //   Declare unique Id
   static uniqueId() {
+    /* eslint-disable no-plusplus */
     const id = this.count++;
     return `book_${id}`;
   }
