@@ -5,16 +5,14 @@ class Book {
     this.author = author;
     this.id = id;
   }
-}
 
-// UI class handle UI tasks
-class UI {
+  // UI class handle UI tasks
   static displayBooks() {
     // const books = Store.getBooks();
 
     const books = JSON.parse(localStorage.getItem('books'));
 
-    UI.addBookTolList(books);
+    Book.addBookTolList(books);
   }
 
   static addBookTolList(books) {
@@ -25,7 +23,7 @@ class UI {
             <article class="d-flex flex-row justify-content-between border-bottom pb-3 mb-3">
             <h2>${book.title}</h2>
             <h4>${book.author}</h4>
-            <button onclick="Store.removeBook('${book.id}')" class="btn btn-danger" >remove</button>
+            <button onclick="Book.removeBook('${book.id}')" class="btn btn-danger" >remove</button>
             </article>
     `,
     );
@@ -51,20 +49,19 @@ class UI {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
   }
-}
 
-//  store class handles storage, store the book name class
-class Store {
+  //  store class handles storage, store the book name class
+
   static getBooks() {
-    let books = JSON.parse(localStorage.getItem('books')) || [];
+    const books = JSON.parse(localStorage.getItem('books')) || [];
 
     return books;
   }
 
   static addBook(book) {
-    const books = Store.getBooks();
+    const books = this.getBooks();
     books.push(book);
-    Store.saveBooks(books);
+    this.saveBooks(books);
   }
 
   //   Save books to locastorage
@@ -73,30 +70,32 @@ class Store {
   }
 
   static count = 0;
+
   //   Declare unique Id
   static uniqueId() {
-    const id = Store.count++;
+    const id = this.count++;
     return `book_${id}`;
   }
 
   static removeBook(id) {
-    let books = Store.getBooks();
+    let books = this.getBooks();
+
     // Filter books based on the remove button id and return the res
     books = books.filter((book) => book.id !== id);
 
     // show success message
-    UI.showAlert('Book Removed', 'danger');
+    this.showAlert('Book Removed', 'danger');
 
     // Then save to local storage again
-    Store.saveBooks(books);
+    this.saveBooks(books);
 
     // Then render the remaining books again
-    UI.displayBooks();
+    this.displayBooks();
   }
 }
 
 // event: display books
-window.addEventListener('DOMContentLoaded', UI.displayBooks);
+window.addEventListener('DOMContentLoaded', Book.displayBooks);
 
 // event: add book
 const addBook = document.querySelector('.addBook');
@@ -108,24 +107,25 @@ addBook.addEventListener('click', (e) => {
   // get form values
   const title = document.querySelector('#title');
   const author = document.querySelector('#author');
-  const Id = Store.uniqueId();
+  const Id = Book.uniqueId();
+
   // validate
   if (title.value === '' || author.value === '') {
-    UI.showAlert('please fill in all feilds', 'danger');
+    Book.showAlert('please fill in all feilds', 'danger');
   } else {
-    //instatiate a book
+    //  Instatiate a book
     const book = new Book(title.value, author.value, Id);
 
-    //add book to store
-    Store.addBook(book);
+    //  Add book to store
+    Book.addBook(book);
 
     // show success message
-    UI.showAlert('Book Added', 'success');
+    Book.showAlert('Book Added', 'success');
 
     // Render books
-    UI.displayBooks();
+    Book.displayBooks();
 
-    //clear feilds
-    UI.clearFields();
+    //  Clear feilds
+    Book.clearFields();
   }
 });
