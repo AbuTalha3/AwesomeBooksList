@@ -6,7 +6,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -21,7 +20,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Hello Microverse Project <a name="about-project"></a>
+# 📖 Awesome Books Project <a name="about-project"></a>
 
 An Awesome books store project, where you can enter the name and author of the books and have it stored, Developed using Html, Css and Javascript
 
