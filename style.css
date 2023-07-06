@@ -44,7 +44,6 @@ button[type='submit'] {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  width: 30%;
   align-self: self-end;
 }
 
@@ -143,29 +142,29 @@ main {
   text-align: center;
   color: #0062cc;
 }
+
 .hung {
   display: flex;
   flex-direction: row;
   justify-content: center;
   justify-items: flex-start;
-  
 }
 
 .rung {
   color: black;
 }
+
 .bung {
   height: 45px;
   width: 42px;
   padding-bottom: 10px;
-  
 }
 
 .bung-add {
   height: 45px;
   width: 42px;
   padding-top: 10px;
-  padding bottom: -10px;
+  padding-bottom: -10px;
 }
 
 .content-section h4 {
@@ -186,7 +185,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: rgb(188, 252, 167);
+  background-color: #0062cc;
   color: #fff;
   padding: 1.2rem 0;
   text-align: center;
