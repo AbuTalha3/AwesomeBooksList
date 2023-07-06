@@ -13,32 +13,95 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+
     <title>MyBookList App</title>
   </head>
   <body>
-    <div class="container mt-4">
-      <h1 class="display-4 text-center">
-        <i class="fas fa-book-open text-primary"></i> Awesome Books
-      </h1>
+    <header>
+      <nav class="container">
+        <h2>
+          <a href="index.html" class="my-logo"> Awesome Books </a>
+        </h2>
 
-      <section class="booksContainer mt-5"></section>
+        <i class="btn-scale nav-icon bi bi-list"></i>
 
-      <form id="book-form mt-5 ">
-        <div class="form-group mt-5">
-          <label for="title">Title</label>
-          <input type="text" id="title" class="form-control" />
+        <div class="close-navbar">
+          <i class="btn-scale close bi bi-x-lg"></i>
+
+          <ul class="nav-items">
+            <li id="list" data-tab-content="listContents" class="nav-list">
+              <a href="#List"> Lists</a>
+            </li>
+            <li id="addNew" data-tab-content="addNewContents" class="nav-list">
+              <a href="#Add New"> Add New</a>
+            </li>
+            <li
+              id="contact"
+              data-tab-content="contactContents"
+              class="nav-list"
+            >
+              <a href="#Contact"> Contact</a>
+            </li>
+          </ul>
         </div>
-        <div class="form-group">
-          <label for="author">Author</label>
-          <input type="text" id="author" class="form-control" />
-        </div>
-        <input
-          type="submit"
-          value="Add Book"
-          class="addBook btn btn-primary btn-block mt-3 mb-3"
-        />
-      </form>
-    </div>
+      </nav>
+    </header>
+    <main class="container mt-4 homePage">
+      <section id="listContents" class="tab-contents">
+        <section
+          class="d-flex flex-row justify-content-between align-items-center col-9 col-md-3 mx-auto"
+        >
+          <i class="fas fa-book-open text-primary"></i>
+          <h1 class="ms-1 text-center">All Awesome Books</h1>
+        </section>
+        <section class="booksContainer mt-5"></section>
+      </section>
+
+      <section id="addNewContents" class="tab-contents">
+        <section
+          class="d-flex flex-row justify-content-between align-items-center col-9 col-md-3 mx-auto"
+        >
+          <i class="fas fa-book-open text-primary"></i>
+          <h1 class="ms-1 text-center">Add a new book</h1>
+        </section>
+
+        <form id="book-form mt-5 ">
+          <div class="form-group mt-5">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" class="form-control" />
+          </div>
+          <input
+            type="submit"
+            value="Add Book"
+            class="addBook btn btn-primary btn-block mt-3 mb-3"
+          />
+        </form>
+      </section>
+
+      <section id="contactContents" class="tab-contents">
+        <section
+          class="d-flex flex-row justify-content-between align-items-center col-9 col-md-3 mx-auto"
+        >
+          <i class="fas fa-book-open text-primary"></i>
+          <h1 class="ms-1 text-center">Contact information</h1>
+        </section>
+      </section>
+
+      <section id="message" class="mt-5"></section>
+    </main>
 
     <script src="app.js"></script>
   </body>

@@ -15,30 +15,55 @@ class Book {
     Book.addBookTolList(books);
   }
 
+  static switchToTab(tabId) {
+    const tab = document.querySelector(`#${tabId}`);
+    if (tab) {
+      // Trigger the click event on the tab element
+      tab.click();
+
+      // Navbar sgowing up onclicking so we need to Hide the navbar on mobile devices
+      const navbar = document.querySelector('.close-navbar');
+      if (navbar) {
+        navbar.classList.remove('open-navbar');
+      }
+    }
+  }
+
   static addBookTolList(books) {
     // const list = document.querySelector('#book-list');
     const row = document.querySelector('.booksContainer');
     const bookList = books.map(
       (book) => `
             <article class="d-flex flex-row justify-content-between border-bottom pb-3 mb-3">
-            <h2>${book.title}</h2>
-            <h4>${book.author}</h4>
+          <div class="col-3 d-flex flex-row justify-content-between">
+          <h2>${book.title}</h2>
+          <h4> by ${book.author}</h4>
+          </div>
             <button onclick="Book.removeBook('${book.id}')" class="btn btn-danger" >remove</button>
             </article>
     `,
     );
 
-    row.innerHTML = bookList.join('');
+    const addNew = document.querySelector('#addNew');
 
-    // list.appendChild(row);
+    row.innerHTML =
+      bookList.length === 0
+        ? `<div class="d-flex flex-column justify-content-between align-items-center col-12 col-md-7 mx-auto">
+        <h5 class=""> Add book to your collections </h5>
+        <button class="btn btn-primary" onclick="Book.switchToTab('${addNew.id}')">
+
+        Add book
+
+       </button> </div>`
+        : bookList.join('');
   }
 
   static showAlert(message, className) {
     const div = document.createElement('div');
     div.className = `alert alert-${className}`;
     div.appendChild(document.createTextNode(message));
-    const container = document.querySelector('.container');
-    const form = document.querySelector('#book-form');
+    const container = document.querySelector('.homePage');
+    const form = document.querySelector('#message');
     container.insertBefore(div, form);
 
     // vanish in three seconds
@@ -78,6 +103,7 @@ class Book {
     return `book_${id}`;
   }
 
+  //   Remove Book
   static removeBook(id) {
     let books = this.getBooks();
 
@@ -92,6 +118,34 @@ class Book {
 
     // Then render the remaining books again
     this.displayBooks();
+  }
+
+  // Navbar functions
+  static handleClick() {
+    // Navbar Variables and Functions
+    const toggleNavBar = document.querySelector('.close-navbar');
+
+    toggleNavBar.classList.toggle('open-navbar');
+  }
+
+  //   Hide All tab contents
+  static selectTab(tabId) {
+    const tabs = document.querySelectorAll('.nav-list');
+    const tabContents = document.querySelectorAll('.tab-contents');
+
+    tabs.forEach((tab) => {
+      tab.classList.remove('active');
+    });
+
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove('active');
+    });
+
+    const tab = document.querySelector(`#${tabId}`);
+    tab.classList.add('active');
+
+    const content = document.querySelector(`#${tab.dataset.tabContent}`);
+    content.classList.add('active');
   }
 }
 
@@ -129,4 +183,27 @@ addBook.addEventListener('click', (e) => {
     //  Clear feilds
     Book.clearFields();
   }
+});
+
+const openNavIcon = document.querySelector('.nav-icon');
+const closeNavIcon = document.querySelector('.close');
+const navList = document.querySelectorAll('.nav-list');
+openNavIcon.addEventListener('click', Book.handleClick);
+closeNavIcon.addEventListener('click', Book.handleClick);
+
+navList.forEach((navItem) => {
+  navItem.addEventListener('click', Book.handleClick);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.nav-list');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      Book.selectTab(tab.id);
+    });
+  });
+
+  // Set default tab
+  Book.selectTab(tabs[0].id);
 });
