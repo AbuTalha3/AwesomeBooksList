@@ -90,7 +90,7 @@ class BookList {
 
     // List books page header
     const h1 = document.createElement('h1');
-    h1.textContent = 'All Awesome Books';
+    h1.textContent = 'Awesome Books Data';
     bookList.appendChild(h1);
 
     this.books.forEach((book, index) => {
@@ -130,5 +130,5 @@ function updateDateTime() {
   document.getElementById('datetime').innerHTML = `${date} ${time}`;
 }
 
-// Recieve updateDateTime function every second to update the time
+// Recieve updateDateTime 
 setInterval(updateDateTime, 1000);
