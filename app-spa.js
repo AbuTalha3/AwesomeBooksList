@@ -59,24 +59,6 @@ class BookList {
     });
   }
 
-  addBook(book) {
-    this.books.push(book);
-    localStorage.setItem('books', JSON.stringify(this.books));
-  }
-
-  removeBook(index) {
-    this.books.splice(index, 1);
-    localStorage.setItem('books', JSON.stringify(this.books));
-  }
-
-  showError(type, message) {
-    const errorElement = this.errorElements[type];
-    errorElement.textContent = message;
-    errorElement.style.display = 'block';
-    document.getElementById(type).style.marginBottom = '1rem';
-    this.resetInputError();
-  }
-
   resetInputError() {
     setTimeout(() => {
       this.errorElements.title.style.display = 'none';
