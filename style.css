@@ -121,7 +121,7 @@ nav > a {
 
 nav ul a {
   font-weight: 700;
-  color: rgb(106, 106, 106);
+  color: rgb(186, 175, 175);
 }
 
 nav ul a:active {
@@ -143,6 +143,30 @@ main {
   text-align: center;
   color: #0062cc;
 }
+.hung {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: flex-start;
+  
+}
+
+.rung {
+  color: black;
+}
+.bung {
+  height: 45px;
+  width: 42px;
+  padding-bottom: 10px;
+  
+}
+
+.bung-add {
+  height: 45px;
+  width: 42px;
+  padding-top: 10px;
+  padding bottom: -10px;
+}
 
 .content-section h4 {
   margin: 1.5rem 0 3rem;
@@ -162,7 +186,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: rgb(106, 106, 106);
+  background-color: rgb(188, 252, 167);
   color: #fff;
   padding: 1.2rem 0;
   text-align: center;
@@ -177,7 +201,7 @@ footer {
 }
 
 #current-time p {
-  color: rgb(106, 106, 106);
+  color: rgb(67, 66, 66);
   font-weight: bolder;
 }
 
