@@ -58,6 +58,7 @@ class BookList {
       this.renderBookList();
     });
   }
+
   addBook(book) {
     this.books.push(book);
     localStorage.setItem('books', JSON.stringify(this.books));
@@ -75,6 +76,7 @@ class BookList {
     document.getElementById(type).style.marginBottom = '1rem';
     this.resetInputError();
   }
+
   resetInputError() {
     setTimeout(() => {
       this.errorElements.title.style.display = 'none';
