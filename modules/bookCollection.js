@@ -1,4 +1,4 @@
-import { addBookToCollections } from './addBookToColllection.js';
+import addBookToCollections from './addBookToColllection.js';
 
 export default class BookCollection {
   constructor() {

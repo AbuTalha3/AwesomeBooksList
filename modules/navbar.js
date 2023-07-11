@@ -13,7 +13,7 @@ const showSection = (sectionId) => {
   selectedSection.classList.remove('hidden');
 };
 
-export const handleNav = () => {
+const handleNav = () => {
   navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
@@ -31,3 +31,5 @@ export const handleNav = () => {
     });
   });
 };
+
+export default handleNav;

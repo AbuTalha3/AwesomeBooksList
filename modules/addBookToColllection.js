@@ -1,4 +1,4 @@
-export const addBookToCollections = (bookCollection) => {
+const addBookToCollections = (bookCollection) => {
   // event listeners to nav. links
 
   // An event listener to the form submit button addition
@@ -29,3 +29,5 @@ export const addBookToCollections = (bookCollection) => {
     bookCollection.renderBookList();
   });
 };
+
+export default addBookToCollections;
