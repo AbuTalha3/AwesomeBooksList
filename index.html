@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://kit.fontawesome.com/074dda2e44.js"
       crossorigin="anonymous"
-    ></script>     
+    ></script>
     <link rel="stylesheet" href="./style.css" />
     <title>MyBookListSPA</title>
-</head>
-<body>
-  <nav>
-    <a href="#">Awesome Books</a>
-    <ul>
-      <li><a href="#book-list" class="active">List</a></li>
-      <li><a href="#add-book-form">Add Book</a></li>
-      <li><a href="#contact-info">Contact</a></li>
-    </ul>
-  </nav>
-  <section id="current-time">
-    <p id="datetime"></p>
-  </section>
-
-  <main>
-    <section id="book-list" class="content-section">
-      <img class="bung-add" src="./images/add-book.jpeg" alt="">
-    </section>
-
-    <section id="add-book-form" class="content-section hidden">
-      <div class="hung">
-        <img class="bung-add" src="./images/add-book.jpeg" alt="">
-        <h1>Add New Book</h1>
-      </div>
-      
-      <form>
-        <input type="text" id="title" placeholder="Title" />
-        <span id="titleError"></span>
-
-        <input type="text" id="author" placeholder="Author" />
-
-        <span id="authorError"></span>
-
-        <button type="submit" id="add-button">Add book</button>
-      </form>
-    </section>
-
-    <section id="contact-info" class="content-section hidden">
-      <div class="hung">
-        <img class="bung" src="./images/contact-icons-png.png" alt="">
-        <h2>Contact</h2>
-      </div>
-      <h4 class="rung"> Our contact information.</h4>
-      <ul class="rung">
-        <li>Email: Abutalha-1122@gmail.com</li>
-        <li>Phone: +92(0)512-2334455</li>
-        <li>Address: 82 Sales Point Islamabad. Pakistan.</li>
+  </head>
+  <body>
+    <nav>
+      <a href="#">Awesome Books</a>
+      <ul>
+        <li><a href="#book-list" class="active">List</a></li>
+        <li><a href="#add-book-form">Add Book</a></li>
+        <li><a href="#contact-info">Contact</a></li>
       </ul>
-      <ul class="rung">
-        <li>Email: Codeeq-Olaide@gmail.com</li>
-        <li>Phone: +234-809-5332133</li>
-        <li>Address: Bowen St Niger. Nigeria.</li>
-      </ul>
+    </nav>
+    <section id="current-time">
+      <p id="datetime"></p>
     </section>
-  </main>
-  <section id="current-time">
-    <p id="datetime"></p>
-  </section>
-  <footer>
-    <p>Copyright (c) 2023 Abu Talha & Sodeeq Olaide Awoyemi</p>
-  </footer>
-  
-  <script src="app-spa.js"></script>
-</body>
+
+    <main>
+      <section id="book-list" class="content-section">
+        <img class="bung-add" src="./images/add-book.jpeg" alt="" />
+      </section>
+
+      <section id="add-book-form" class="content-section hidden">
+        <div class="hung">
+          <img class="bung-add" src="./images/add-book.jpeg" alt="" />
+          <h1>Add New Book</h1>
+        </div>
+
+        <form>
+          <input type="text" id="title" placeholder="Title" />
+          <span id="titleError"></span>
+
+          <input type="text" id="author" placeholder="Author" />
+
+          <span id="authorError"></span>
+
+          <button type="submit" id="add-button">Add book</button>
+        </form>
+      </section>
+
+      <section id="contact-info" class="content-section hidden">
+        <div class="hung">
+          <img class="bung" src="./images/contact-icons-png.png" alt="" />
+          <h2>Contact</h2>
+        </div>
+        <h4 class="rung">Our contact information.</h4>
+        <ul class="rung">
+          <li>Email: Abutalha-1122@gmail.com</li>
+          <li>Phone: +92(0)512-2334455</li>
+          <li>Address: 82 Sales Point Islamabad. Pakistan.</li>
+        </ul>
+        <ul class="rung">
+          <li>Email: Codeeq-Olaide@gmail.com</li>
+          <li>Phone: +234-809-5332133</li>
+          <li>Address: Bowen St Niger. Nigeria.</li>
+        </ul>
+      </section>
+    </main>
+    <section id="current-time">
+      <p id="datetime"></p>
+    </section>
+    <footer>
+      <p>Copyright (c) 2023 Abu Talha & Sodeeq Olaide Awoyemi</p>
+    </footer>
+
+    <script src="index.js" type="module"></script>
+  </body>
 </html>

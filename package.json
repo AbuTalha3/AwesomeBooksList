@@ -9,5 +9,23 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
-  }
+  },
+  "name": "awesomebookslist",
+  "description": "<a name=\"readme-top\"></a>",
+  "version": "1.0.0",
+  "main": "app-spa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Errytagedesign/awesomeBooksList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Errytagedesign/awesomeBooksList/issues"
+  },
+  "homepage": "https://github.com/Errytagedesign/awesomeBooksList#readme"
 }
