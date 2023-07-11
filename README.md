@@ -20,7 +20,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Awesome Books Project <a name="about-project"></a>
+# 📖 Awesome Books Project Using Module and ES6 <a name="about-project"></a>
 
 An Awesome books store project, where you can enter the name and author of the books and have it stored, Developed using Html, Css and Javascript
 
@@ -47,7 +47,10 @@ An Awesome books store project, where you can enter the name and author of the b
 
 - Add index.html file.
 - Add style.css file.
-- Add app.js file.
+- Add index.js file.
+- Add Module directory.
+- Add navabr.js, addBookCollection.js, bookCollection.js to Module directory and export them.
+- Import modules to index.js file
 - Add Linters.
 - Add Header to the index.html file.
 - Add global styling variables to style.css file.
@@ -124,12 +127,6 @@ I have added the linters or tests in order to avoid anykind of typos and ensure 
 - GitHub: [@githubhandle](https://github.com/Errytagedesign)
 - Twitter: [@twitterhandle](https://twitter.com/errytage)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/errytagedesigns/)
-
-👤 Abu Talha
-
-- GitHub: [@githubhandle](https://github.com/AbuTalha3)
-- Twitter: [@twitterhandle](https://twitter.com/AbuTalha8T)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abu-talha-8203b252/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
