@@ -22,7 +22,7 @@
 
 # 📖 Awesome Books Project <a name="about-project"></a>
 
-An Awesome books store project, where you can enter the name and author of the books and have it stored, Developed using Html, Css and Javascript
+Awe some books is a must have app for book readers, made with HTML, CSS and JavaScript . You can have your own collection of books which you want to read, or you have read already. You can add books with Author details and can remove when no more needed.An Awesome books store project, where you can enter the name and author of the books and have it stored, Developed using Html, Css and Javascript
 
 ## 🛠 Built With <a name="built-with"></a>
 
