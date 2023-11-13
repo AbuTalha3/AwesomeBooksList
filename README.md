@@ -26,9 +26,9 @@ Awe some books is a must have app for book readers, made with HTML, CSS and Java
 
 ## 🛠 Built With <a name="built-with"></a>
 
-1-HTML
-2-CSS
-3-JS
+1-Hyper Text Markup Language
+2-Cascading Style Sheet
+3-JavaScript
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -165,7 +165,7 @@ If you like this project just give it a star -
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse.
+I would like to thank Microverse. And my partner Sodique for helping me out
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
