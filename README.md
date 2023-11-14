@@ -87,17 +87,17 @@ Run this command:
 
 ### Usage
 
-- In order to use this project you either create branch to add more features.
-- But in order to run the project open index.html with live server
+- To use this project, you create a branch to add more features.
+- But in order to run the project open index.html with a live server
 
 ### Run Linters
 
-I have added the linters or tests in order to avoid anykind of typos and ensure the good practices in this project. So while using this repository if you need to check your work in html and css you can use below commands
+I have added the linters or tests in order to avoid any kind of typos and ensure good practices in this project. So while using this repository if you need to check your work in html and css you can use the below commands
 
 - in order to run the linter test on index.html:
 
 ```sh
- npx hint .
+ npx hint.
 ```
 
 - in order to run the linter test on stylesheets:
