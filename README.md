@@ -50,7 +50,7 @@ Awe Some Books is a must-have app for book readers, made with HTML, CSS, and Jav
 - Add app.js file.
 - Add Linters.
 - Add a Header to the index.html file.
-- Add global styling variables to style.css file.
+- Add global styling variables to the style.css file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
