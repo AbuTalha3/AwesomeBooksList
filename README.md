@@ -68,7 +68,7 @@ Awe Some Books is a must-have app for book readers, made with HTML, CSS, and Jav
 
 Clone this repository to your desired folder as follows:
 
-Run this Command:
+First Run this Command:
 
 ```sh
   cd my-folder
