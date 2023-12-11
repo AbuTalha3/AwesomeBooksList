@@ -77,7 +77,7 @@ First Run this Command:
 
 ### Install
 
-First you need to install the node package files
+First, you need to install the node package files
 Run this command:
 
 ```sh
