@@ -87,7 +87,7 @@ Run this command:
 
 ### Usage
 
-- To use this project, you create a branch to add more features.
+- To use this project, you create a new branch to add more features.
 - But in order to run the project open index.html with a live server
 
 ### Run Linters
