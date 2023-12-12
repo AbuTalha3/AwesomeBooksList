@@ -26,9 +26,9 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-1-Hyper Text Markup Language
-2-Cascading Style Sheet
-3-JavaScript
+- `Hyper Text Markup Language`
+- `Cascading Style Sheet`
+- `JavaScript`
 
 ### Tech Stack <a name="tech-stack"></a>
 
