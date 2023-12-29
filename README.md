@@ -92,7 +92,7 @@ Run this command:
 
 ### Run Linters
 
-I have added the Linters or tests in order to avoid any kind of typos and ensure good practices in this project. So while using this repository if you need to check your work in `HTML` and CSS you can use the commands  below.
+I have added the Linters or tests in order to avoid any kind of typos and ensure good practices in this project. So while using this repository if you need to check your work in `HTML` and `CSS` you can use the commands  below.
 
 - in order to run the linter test on index.html:
 
