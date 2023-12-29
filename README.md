@@ -108,7 +108,7 @@ I have added the Linters or tests in order to avoid any kind of typos and ensure
 
 ### Deployment
 
-- You can easily use github pages, Netlify or vercel to deploy your project
+- You can easily use GitHub pages, Netlify or Vercel to deploy your project
   <a href="https://docs.github.com/en/pages/quickstart">Useful link about Github Pages</a>
   <a href="https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/">Step by Step guide to deploy using netlify</a>
   <a href="https://www.programonaut.com/host-your-application-for-free-with-vercel-step-by-step/">Step by Step guide to deploy using vercel</a>
