@@ -49,7 +49,7 @@
 - Add `style.css` file.
 - Add `app.js` file.
 - Add `Linters`.
-- Add a Header to the index.html file.
+- Add a Header to the `index.html` file.
 - Add global styling variables to the style.css file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
