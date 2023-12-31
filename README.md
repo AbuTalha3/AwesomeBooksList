@@ -60,9 +60,9 @@
 
 ### Prerequisites
 
-1-Web Browser
-2-Code Editor
-3-Git
+1- Web Browser
+2- Code Editor
+3- Git
 
 ### Setup
 
