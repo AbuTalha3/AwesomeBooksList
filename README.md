@@ -48,7 +48,7 @@
 - Add `index.html` file.
 - Add `style.css` file.
 - Add `app.js` file.
-- Add Linters.
+- Add `Linters`.
 - Add a Header to the index.html file.
 - Add global styling variables to the style.css file.
 
