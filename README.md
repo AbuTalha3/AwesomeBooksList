@@ -22,7 +22,7 @@
 
 # 📖 Awesome Books Project <a name="about-project"></a>
 
-`Awesome Books` is a must-have app for book readers, made with **`Hyper Text Markup Language`**, `Cascading Style Sheets`, and `JavaScript`. You can have your own `collection of books` that you want to read, or you have read already. You can add books with Author details and can remove them when no more needed. An Awesome books store project, where you can enter the name and author of the books and have it stored, Developed using HTML, CSS, and Javascript
+`Awesome Books` is a must-have app for book readers, made with **`Hyper Text Markup Language`**, **`Cascading Style Sheets`**, and `JavaScript`. You can have your own `collection of books` that you want to read, or you have read already. You can add books with Author details and can remove them when no more needed. An Awesome books store project, where you can enter the name and author of the books and have it stored, Developed using HTML, CSS, and Javascript
 
 ## 🛠 Built With <a name="built-with"></a>
 
