@@ -46,7 +46,7 @@
 ### Key Features <a name="key-features"></a>
 
 - Add **`index.html`** file.
-- Add `style.css` file.
+- Add **`style.css`** file.
 - Add `app.js` file.
 - Add `Linters`.
 - Add a Header to the `index.html` file.
