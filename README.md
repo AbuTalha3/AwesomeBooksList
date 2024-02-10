@@ -123,7 +123,7 @@ I have added the Linters or tests in order to avoid any kind of typos and ensure
 
 - GitHub: [@githubhandle](https://github.com/Errytagedesign)
 - Twitter: [@twitterhandle](https://twitter.com/errytage)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/errytagedesigns/)
+- LinkedIn [LinkedIn](https://www.linkedin.com/in/errytagedesigns/)
 
 👤 Abu Talha
 
